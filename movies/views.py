@@ -2,7 +2,7 @@ from movies.models import Movie, Genre, Review
 from django.contrib.auth.models import User
 from movies.serializers import MovieSerializer, GenreSerializer, ReviewSerializer, UserSerializer
 from rest_framework import viewsets
-from permissions import IsOwnerOrReadOnly
+from movies.permissions import IsOwnerOrReadOnly
 
 
 class MovieViewSet(viewsets.ModelViewSet):

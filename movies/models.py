@@ -8,7 +8,7 @@ class Genre(models.Model):
 
 class Movie(models.Model):
     title = models.CharField(max_length=100, blank=True, default='')
-    release_date = models.DateTimeField()
+    release_date = models.DateField()
     genre = models.ManyToManyField(Genre)
 
     def __str__(self):
